@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/head-foot/project/Project/CSS/menu.css">
+    <script src="../javascript/main.js"></script>
+
+
+    <!-- owl carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/0c86a0aecc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <div class="header">
+
+        <!-- For medium devices (desktops, 768px and up) -->
+        
+        <div class=" nav d-none d-md-block ">
+            <nav class="navbar navbar-expand-md  ">
+              <a class="navbar-brand" href="/head-foot/project/Project/HTML/index.html">
+                <img src="../image/domino-horizontal-dark.svg" alt="Pizza Dominos">
+              </a>
+              <div class="collapse navbar-collapse" style="justify-content: center; ">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="#">MÃ E-VOUCHER</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">KHUYẾN MÃI</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/head-foot/project/Project/HTML/menu.html">THỰC ĐƠN</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/head-foot/project/Project/HTML/phone.html">THEO DÕI ĐƠN HÀNG</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/head-foot/project/Project/HTML/list_store.html">DANH SÁCH CỬA HÀNG</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+                </ul>
+                  </div>
+                  <div class="d-flex">
+                      <a class="text-decoration-none pl-3" role="button"><img src="../image/flags/flag-vn.png"
+                              alt="flag-vn"></a>
+                      <a class="text-decoration-none ml-1" role="button"><img src="../image/flags/flag-en.png"
+                              alt="flag-en"></a>
+                  </div>
+                  <div class="icon ">
+                      <a class="nav-link " data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa fa-user"
+                              style="color: #ffffff;font-size:xx-large;"></i></a>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                          <div class="modal-dialog modal-dialog-centered" style="max-width: 800px; max-height: 354px;">
+                              <div class="modal-content">
+  
+                                  <!-- Modal body -->
+                                  <div class="Modal" id="myModal">
+                                      <div class="Modal-pizza">
+                                          <img src="../img/anh1.png" alt="pizza">
+                                      </div>
+  
+                                      <div id="formContainer">
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  
+                                          <!-- <span  onclick="document.getElementById('myModal').style.display ='none';" class="w3-button w3-teal w3-xlarge">×</span> -->
+  
+                                          <div class="form">
+  
+                                              <div class="loginLink">
+                                                  <div id="DN">
+                                                      <a onclick="changeColor1('DN');switchForm();">Đăng Nhập</a>
+                                                  </div>
+                                                  <div id="DK">
+                                                      <a onclick="changeColor1('DK');switchForm();">Tạo Tài khoản</a>
+                                                  </div>
+                                              </div>
+                                              <!-- form ĐN -->
+                                              <form id="loginForm">
+                                                  <div class="inputform">
+                                                      <h4>Email</h4>
+                                                      <input type="email" id="email" placeholder="Nhập email của bạn"><br>
+                                                      <h4>Mật Khẩu</h4>
+                                                      <input type="password" id="password"
+                                                          placeholder="Nhập mật khẩu của bạn"><br>
+  
+                                                      <button class="btnformDN" type="submit">Đăng Nhập</button>
+                                                  </div>
+                                              </form>
+  
+  
+  
+                                              <!-- Form ĐK -->
+                                              <form id="registerForm" style="display: none;">
+                                                  <div class="inputform">
+                                                      <h4>Họ Và Tên</h4>
+                                                      <input type="text" id="name" oninput="validateName()"
+                                                          placeholder="Nhập họ và tên của bạn"><br>
+                                                      <span id="nameError"></span>
+  
+                                                      <h4>Số điện thoại</h4>
+                                                      <input type="text" id="phone" oninput="validatePhone()"
+                                                          placeholder="Nhập số điện thoại của bạn"><br>
+                                                      <span id="phoneError"></span>
+  
+                                                      <h4>Email</h4>
+                                                      <input type="email" id="email" oninput="validateEmail()"
+                                                          placeholder="Nhập email của bạn"><br>
+                                                      <span id="emailError"></span>
+  
+                                                      <form id="Formpassword">
+                                                          <h4>Mật Khẩu</h4>
+                                                          <input type="password" id="password1" name="password1"
+                                                              oninput="validatePassword1()"
+                                                              placeholder="Nhập mật khẩu của bạn"><br>
+                                                          <span id="passwordError1"></span>
+                                                          <h4>Xác Nhận Mật Khẩu</h4>
+                                                          <input type="password" id="password2" name="password2"
+                                                              oninput="validatePassword2()"
+                                                              placeholder="Nhập lại mật khẩu của bạn"><br>
+                                                          <span id="passwordError2"></span>
+                                                          <div id="message"></div>
+                                                          <button class="btnformDN" type="submit" value="submit">Đăng
+                                                              Ký</button>
+                                                          <!-- <input type="submit" value="Submit"> -->
+                                                      </form>
+                                                  </div>
+                                              </form>
+                                          </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="icon ">
+                      <a class="nav-link"><i class="fa-solid fa-basket-shopping"
+                              style="color: #ffffff;font-size:xx-large;"></i></a>
+                  </div>
+              </nav>
+          </div>
+  
+  
+  
+          <!-- For small devices (tablets, 576px and up) -->
+          <div class="nav1 d-none d-sm-block d-md-none">
+              <nav class="navbar1 navbar-expand-md  ">
+                  <a class="navbar-brand1" href="header.html">
+                      <img src="../image/domino-horizontal-dark.svg" alt="Pizza Dominos">
+                  </a>
+                  <div class="d-flex">
+                      <a class="text-decoration-none pl-3" role="button"><img src="../image/flags/flag-vn.png"
+                              alt="flag-vn"></a>
+                      <a class="text-decoration-none ml-1" role="button"><img src="../image/flags/flag-en.png"
+                              alt="flag-en"></a>
+                  </div>
+                  <div class="icon-left">
+                      <div class="icon1 ">
+                          <a class="nav-link1" href="/head-foot/project/Project/HTML/phone.html"> <i class="fa-solid fa-motorcycle"
+                                  style="padding-top: 10px ;font-size:25px;"></i></a>
+                      </div>
+                      <div class="icon1">
+                          <a class="nav-link1" data-bs-toggle="modal" data-bs-target="#myModal"><i
+                                  class="fa-solid fa-user" style=" padding-top: 10px ;font-size:25px;"></i></a>
+                      </div>
+                      <div class="icon1 ">
+                          <a class="nav-link1" href="/head-foot/project/Project/HTML/cart.html"><i class="fa-solid fa-basket-shopping"
+                                  style="padding-top: 10px ;font-size:25px;"></i></a>
+                      </div>
+                      <div class="icon1 ">
+                          <a class="nav-link1">
+                              <div id="hamburgerbar1">
+                                  <span id="openNav1" style="font-size:26px;" onclick="openNav1()">☰</span>
+                                  <span id="closeNav1" href="javascript:void(0)" class="closebtn1" onclick="closeNav1()"
+                                      style="font-size:26px;display:none">×</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+          </div>
+          
+              <!--  For extra small devices (phones, less than 576px) -->
+              <div class="nav1 d-block d-sm-none">
+                  <nav class="navbar1 navbar-expand-md  ">
+                      <a class="navbar-brand1" href="../HTML/index.html">
+                          <img src="../image/domino.svg" alt="Pizza Dominos">
+                      </a>
+                      <div class="icon-left">
+  
+                          <div class="icon1 ">
+                              <a class="nav-link1" href="/head-foot/project/Project/HTML/phone.html"> <i class="fa-solid fa-motorcycle"
+                                      style="padding-top: 10px ;font-size:25px;"></i></a>
+                          </div>
+                          <div class="icon1 ">
+                              <a class="nav-link1"><img src="../image/promotion1.svg" alt="sales">&nbsp</a>
+                          </div>
+                          <div class="icon1 ">
+                              <a class="nav-link1" href="/head-foot/project/Project/HTML/menu.html"><img src="../image/menu.svg" alt="menu"></a>
+                          </div>
+                          <div class="icon1">
+                              <a class="nav-link1" data-bs-toggle="modal2" data-bs-target="#myModa2"><i
+                                      class="fa-solid fa-user" style="padding-top: 10px ;font-size:25px;"></i></a>
+  
+                          </div>
+                          <div class="icon1 ">
+                              <a class="nav-link1" href="/head-foot/project/Project/HTML/cart.html"><i class="fa-solid fa-basket-shopping"
+                                      style="padding-top: 10px ;font-size:25px;"></i></a>
+                          </div>
+                          <div class="icon1">
+                              <a class="nav-link1">
+                                  <div id="hamburgerbar">
+                                      <span id="openNav" style="font-size:26px;" onclick="openNav()">☰</span>
+                                      <span id="closeNav" href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                                          style="font-size:26px;display:none">×</span>
+                                  </div>
+                                  <div id="mySidenav" class="sidenav">
+                                      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+                                      <a href="#">ĐĂNG NHẬP/TẠO TÀI KHOẢN</a>
+                                      <a href="#">MÃ E-VOUCHER</a>
+                                      <a href="#">KHUYẾN MÃI</a>
+                                      <a href="#">THỰC ĐƠN</a>
+                                      <a href="#">THEO DÕI ĐƠN HÀNG</a>
+                                      <a href="#">BLOG</a>
+                                      <a href="#">TUYỂN DỤNG</a>
+                                      <a href="#">CHÍNH SÁCH</a>
+                                      <a href="#">DANH SÁCH CỬA HÀNG</a>
+                                      <div class="fb-itg">
+                                          <a
+                                              href="https://www.facebook.com/DominosPizzaVietnam/?brand_redir=207571100452">
+                                              <i class="fa fa-facebook" style="font-size: 30px;"></i></a>
+                                          <a href="https://www.instagram.com/dominospizza_vietnam/">
+                                              <i class="fa  fa-instagram" style="font-size: 30px;"></i></a>
+                                      </div>
+                                      <div class="d-flex1">
+                                          <a class="text-decoration-none pl-3" role="button"><img
+                                                  src="../image/flags/flag-vn.png" alt="flag-vn"></a>
+                                          <a class="text-decoration-none ml-1" role="button"><img
+                                                  src="../image/flags/flag-en.png" alt="flag-en"></a>
+                                      </div>
+                                  </div>
+                              </a>
+  
+                          </div>
+                  </nav>
+              </div>
+      </div>
+
+    <!-- bodymap -->
+    <section class="bg-grey-lightest product-listing">
+        <div class="container-fluid">
+            <div class="row row-product-layout justify-content-center">
+                <div class="col-9 col-product-layout-list">
+                    <div class="cart-fixed w-100">
+                        <div>
+                            <div class="background"
+                                style="background-image: url('../image/background/deep-see.png');background-size: cover; background-repeat: no-repeat; background-position: center;">
+                                <div classs="search-btn">
+                                    <a id="myButton1" onclick="changeColor('myButton1')" class="transparent-button">
+                                        Giao hàng tận nơi</a>
+                                    <a id="myButton2" onclick="changeColor('myButton2')" class="transparent-button">Đặt
+                                        đến lấy</a>
+                                </div>
+                                <div class="tab-pane">
+                                    <div class="search-input">
+                                        <input class="input1" type="text" placeholder="Vui lòng nhập địa chỉ nhà hàng">
+                                        <button class="button3" type="search"> <i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row product-categories bg-white border-bottom border-grey-lighter "
+                                style="height: 40px;">
+                                <div class="col-9 col-md-10 px-0 px-md-3 mx-md-auto pt-0 ">
+                                    <ul
+                                        class="nav justify-content-start justify-content-md-between mx-n3 category-container">
+                                        <li class="nav-item"><a>Khuyến mãi mỗi ngày</a></li>
+                                        <li class="nav-item"><a>Pizza</a></li>
+                                        <li class="nav-item"><a>Món phụ</a></li>
+                                        <li class="nav-item"><a>Tráng miệng</a></li>
+                                        <li class="nav-item"><a>thức uống</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cart-product-view container-fluid overflow-auto" style="height: 500px;">
+                        <div class="row product-filter">
+                            <div class="col-9 col-md-10 mx-auto">
+                                <div class="d-flex justify-content-start align-items-center flex-wrap my-3">
+                                    <a class="btn btn-coke btn-sm rounded-xl mr-3 mb-2 custom-tag-btn" href=""
+                                        style="font-weight:bold"> Tất cả</a>
+
+                                    <a class="btn btn-light btn-sm border rounded-xl mr-3 mb-2 custom-tag-btn" href=""
+                                        style="font-weight:bold"> Hải sản
+                                        <img class="tag-logo" src="../image/filler/fried-shrimp_1f364.png" alt="">
+                                    </a>
+                                    <a class="btn btn-light btn-sm border rounded-xl mr-3 mb-2 custom-tag-btn" href=""
+                                        style="font-weight:bold"> Bò
+                                        <img class="tag-logo" src="../image/filler/cut-of-meat_1f969.png" alt="">
+                                    </a>
+                                    <a class="btn btn-light btn-sm border rounded-xl mr-3 mb-2 custom-tag-btn" href=""
+                                        style="font-weight:bold"> Gà
+                                        <img class="tag-logo" src="../image/filler/poultry-leg_1f357.png" alt="">
+                                    </a>
+                                    <a class="btn btn-light btn-sm border rounded-xl mr-3 mb-2 custom-tag-btn" href=""
+                                        style="font-weight:bold"> Heo
+                                        <img class="tag-logo" src="../image/filler/bacon_1f953.png" alt="">
+                                    </a>
+                                    <a class="btn btn-light btn-sm border rounded-xl mr-3 mb-2 custom-tag-btn" href=""
+                                        style="font-weight:bold"> Ăn chay
+                                        <img class="tag-logo" src="../image/filler/leafy-green_1f96c.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row category-heading pt-1 pb-2 pb-md-4">
+                            <div class="col-9 col-md-11 mx-auto mt-3 text-center">
+                                <h4 class="hr-content bg-grey-lightest text-uppercase collection-container ">
+                                    <span class="px-2">
+                                        FLAVOR OF THE WILD
+                                    </span>
+                                </h4>
+
+
+                                <div class="row category-products">
+                                    <div class="col-12 col-md-11 mx-auto">
+                                        <div class="row org-product-grid py-3 flex-nowrap ">
+                                            <div class="col-3 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content ">
+                                                        <a href="" class="name">Pizza Siêu Topping Hải Sản Xốt
+                                                            Mayonnaise - Super Topping Ocean Mania</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-9 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content">
+                                                        <a href="" class="name">Pizza Ngập Vị Phô Mai Hảo Hạng - Cheesy
+                                                            Madness</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-9 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content">
+                                                        <a href="" class="name">Pizza Siêu Topping Hải Sản Xốt
+                                                            Mayonnaise - Super Topping Ocean Mania</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-9 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content">
+                                                        <a href="" class="name">Pizza Siêu Topping Hải Sản Xốt
+                                                            Mayonnaise - Super Topping Ocean Mania</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="row category-heading pt-1 pb-2 pb-md-4">
+                            <div class="col-9 col-md-11 mx-auto mt-3 text-center">
+                                <h4 class="hr-content bg-grey-lightest text-uppercase collection-container ">
+                                    <span class="px-2">
+                                        FLAVOR OF THE WILD
+                                    </span>
+                                </h4>
+
+
+                                <div class="row category-products">
+                                    <div class="col-12 col-md-11 mx-auto">
+                                        <div class="row org-product-grid py-3 flex-nowrap ">
+                                            <div class="col-3 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content ">
+                                                        <a href="" class="name">Pizza Siêu Topping Hải Sản Xốt
+                                                            Mayonnaise - Super Topping Ocean Mania</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-9 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content">
+                                                        <a href="" class="name">Pizza Ngập Vị Phô Mai Hảo Hạng - Cheesy
+                                                            Madness</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-9 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content">
+                                                        <a href="" class="name">Pizza Siêu Topping Hải Sản Xốt
+                                                            Mayonnaise - Super Topping Ocean Mania</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-9 col-sm-6 col-md-3 py-2 flex-fit">
+                                                <div class="cart_product">
+                                                    <div class="product_img">
+                                                        <div class="img">
+                                                            <a class="product">
+                                                                <img src="../img/Pizza+Extra+Topping+(2).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_content">
+                                                        <a href="" class="name">Pizza Siêu Topping Hải Sản Xốt
+                                                            Mayonnaise - Super Topping Ocean Mania</a>
+                                                        <p class="price">MEDIUM - 235,000₫</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <divc class="col-3 col-product-layout-cart px-0 bg-white d-none d-lg-block border">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 text-center">
+                                <img class="img-fluid comp-filter--luminosity" src="../img/empty-cart.svg" alt="">
+                                <h6>
+                                    Giỏ hàng chưa có sản phẩm. Xin mời bạn mua hàng
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        function changeColor(myButtonId) {
+            document.getElementById(myButtonId).style.backgroundColor = "white";
+            document.getElementById(myButtonId).style.color = "red";
+            document.getElementById(myButtonId).style.fontWeight = "bold";
+            document.getElementById(myButtonId === 'myButton1' ? 'myButton2' : 'myButton1').style = "";
+            document.getElementById(myButtonId).style.border = "none";
+            document.getElementById(myButtonId).style.borderTopLeftRadius = "5px";
+            document.getElementById(myButtonId).style.borderToprightRadius = "5px";
+            document.getElementById(myButtonId).style.height = "56px";
+            document.getElementById(myButtonId).style.margin = "0 0 -9px";
+            document.getElementById(myButtonId).style.padding = "16px 32px";
+            document.getElementById(myButtonId).style.position = "relative";
+
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

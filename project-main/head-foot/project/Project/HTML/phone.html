@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/head-foot/project/Project/CSS/phone.css">
+    <script src="../javascript/main.js"></script>
+
+
+    <!-- owl carousel -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/0c86a0aecc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <div class="header">
+
+        <!-- For medium devices (desktops, 768px and up) -->
+        <div class=" nav d-none d-md-block ">
+          <nav class="navbar navbar-expand-md  ">
+            <a class="navbar-brand" href="/head-foot/project/Project/HTML/index.html">
+              <img src="../image/domino-horizontal-dark.svg" alt="Pizza Dominos">
+            </a>
+            <div class="collapse navbar-collapse" style="justify-content: center; ">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">MÃ E-VOUCHER</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">KHUYẾN MÃI</a></li>
+                <li class="nav-item"><a class="nav-link" href="/head-foot/project/Project/HTML/menu.html">THỰC ĐƠN</a></li>
+                <li class="nav-item"><a class="nav-link" href="/head-foot/project/Project/HTML/phone.html">THEO DÕI ĐƠN HÀNG</a></li>
+                <li class="nav-item"><a class="nav-link" href="/head-foot/project/Project/HTML/list_store.html">DANH SÁCH CỬA HÀNG</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+              </ul>
+                </div>
+                <div class="d-flex">
+                    <a class="text-decoration-none pl-3" role="button"><img src="../image/flags/flag-vn.png"
+                            alt="flag-vn"></a>
+                    <a class="text-decoration-none ml-1" role="button"><img src="../image/flags/flag-en.png"
+                            alt="flag-en"></a>
+                </div>
+                <div class="icon ">
+                    <a class="nav-link " data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa fa-user"
+                            style="color: #ffffff;font-size:xx-large;"></i></a>
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered" style="max-width: 800px; max-height: 354px;">
+                            <div class="modal-content">
+
+                                <!-- Modal body -->
+                                <div class="Modal" id="myModal">
+                                    <div class="Modal-pizza">
+                                        <img src="../img/anh1.png" alt="pizza">
+                                    </div>
+
+                                    <div id="formContainer">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                                        <!-- <span  onclick="document.getElementById('myModal').style.display ='none';" class="w3-button w3-teal w3-xlarge">×</span> -->
+
+                                        <div class="form">
+
+                                            <div class="loginLink">
+                                                <div id="DN">
+                                                    <a onclick="changeColor1('DN');switchForm();">Đăng Nhập</a>
+                                                </div>
+                                                <div id="DK">
+                                                    <a onclick="changeColor1('DK');switchForm();">Tạo Tài khoản</a>
+                                                </div>
+                                            </div>
+                                            <!-- form ĐN -->
+                                            <form id="loginForm">
+                                                <div class="inputform">
+                                                    <h4>Email</h4>
+                                                    <input type="email" id="email" placeholder="Nhập email của bạn"><br>
+                                                    <h4>Mật Khẩu</h4>
+                                                    <input type="password" id="password"
+                                                        placeholder="Nhập mật khẩu của bạn"><br>
+
+                                                    <button class="btnformDN" type="submit">Đăng Nhập</button>
+                                                </div>
+                                            </form>
+
+
+
+                                            <!-- Form ĐK -->
+                                            <form id="registerForm" style="display: none;">
+                                                <div class="inputform">
+                                                    <h4>Họ Và Tên</h4>
+                                                    <input type="text" id="name" oninput="validateName()"
+                                                        placeholder="Nhập họ và tên của bạn"><br>
+                                                    <span id="nameError"></span>
+
+                                                    <h4>Số điện thoại</h4>
+                                                    <input type="text" id="phone" oninput="validatePhone()"
+                                                        placeholder="Nhập số điện thoại của bạn"><br>
+                                                    <span id="phoneError"></span>
+
+                                                    <h4>Email</h4>
+                                                    <input type="email" id="email" oninput="validateEmail()"
+                                                        placeholder="Nhập email của bạn"><br>
+                                                    <span id="emailError"></span>
+
+                                                    <form id="Formpassword">
+                                                        <h4>Mật Khẩu</h4>
+                                                        <input type="password" id="password1" name="password1"
+                                                            oninput="validatePassword1()"
+                                                            placeholder="Nhập mật khẩu của bạn"><br>
+                                                        <span id="passwordError1"></span>
+                                                        <h4>Xác Nhận Mật Khẩu</h4>
+                                                        <input type="password" id="password2" name="password2"
+                                                            oninput="validatePassword2()"
+                                                            placeholder="Nhập lại mật khẩu của bạn"><br>
+                                                        <span id="passwordError2"></span>
+                                                        <div id="message"></div>
+                                                        <button class="btnformDN" type="submit" value="submit">Đăng
+                                                            Ký</button>
+                                                        <!-- <input type="submit" value="Submit"> -->
+                                                    </form>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon ">
+                    <a class="nav-link" href="./cart.html"><i class="fa-solid fa-basket-shopping"
+                            style="color: #ffffff;font-size:xx-large;"></i></a>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <!-- For small devices (tablets, 576px and up) -->
+        <div class="nav1 d-none d-sm-block d-md-none">
+            <nav class="navbar1 navbar-expand-md  ">
+                <a class="navbar-brand1" href="./index.html">
+                    <img src="../image/domino-horizontal-dark.svg" alt="Pizza Dominos">
+                </a>
+                <div class="d-flex">
+                    <a class="text-decoration-none pl-3" role="button"><img src="../image/flags/flag-vn.png"
+                            alt="flag-vn"></a>
+                    <a class="text-decoration-none ml-1" role="button"><img src="../image/flags/flag-en.png"
+                            alt="flag-en"></a>
+                </div>
+                <div class="icon-left">
+                    <div class="icon1 ">
+                        <a class="nav-link1" href="/head-foot/project/Project/HTML/phone.html"> <i class="fa-solid fa-motorcycle"
+                                style="padding-top: 10px ;font-size:25px;"></i></a>
+                    </div>
+                    <div class="icon1">
+                        <a class="nav-link1" data-bs-toggle="modal" data-bs-target="#myModal"><i
+                                class="fa-solid fa-user" style=" padding-top: 10px ;font-size:25px;"></i></a>
+                    </div>
+                    <div class="icon1 ">
+                        <a class="nav-link1" href="/head-foot/project/Project/HTML/cart.html"><i class="fa-solid fa-basket-shopping"
+                                style="padding-top: 10px ;font-size:25px;"></i></a>
+                    </div>
+                    <div class="icon1 ">
+                        <a class="nav-link1">
+                            <div id="hamburgerbar1">
+                                <span id="openNav1" style="font-size:26px;" onclick="openNav1()">☰</span>
+                                <span id="closeNav1" href="javascript:void(0)" class="closebtn1" onclick="closeNav1()"
+                                    style="font-size:26px;display:none">×</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        
+            <!--  For extra small devices (phones, less than 576px) -->
+            <div class="nav1 d-block d-sm-none">
+                <nav class="navbar1 navbar-expand-md  ">
+                    <a class="navbar-brand1" href="./index.html">
+                        <img src="../image/domino.svg" alt="Pizza Dominos">
+                    </a>
+                    <div class="icon-left">
+
+                        <div class="icon1 ">
+                            <a class="nav-link1" href="/head-foot/project/Project/HTML/phone.html"> <i class="fa-solid fa-motorcycle"
+                                    style="padding-top: 10px ;font-size:25px;"></i></a>
+                        </div>
+                        <div class="icon1 ">
+                            <a class="nav-link1"><img src="../image/promotion1.svg" alt="sales">&nbsp</a>
+                        </div>
+                        <div class="icon1 ">
+                            <a class="nav-link1" href="/head-foot/project/Project/HTML/menu.html"><img src="../image/menu.svg" alt="menu"></a>
+                        </div>
+                        <div class="icon1">
+                            <a class="nav-link1" data-bs-toggle="modal2" data-bs-target="#myModa2"><i
+                                    class="fa-solid fa-user" style="padding-top: 10px ;font-size:25px;"></i></a>
+
+                        </div>
+                        <div class="icon1 ">
+                            <a class="nav-link1" href="/head-foot/project/Project/HTML/cart.html"><i class="fa-solid fa-basket-shopping"
+                                    style="padding-top: 10px ;font-size:25px;"></i></a>
+                        </div>
+                        <div class="icon1">
+                            <a class="nav-link1">
+                                <div id="hamburgerbar">
+                                    <span id="openNav" style="font-size:26px;" onclick="openNav()">☰</span>
+                                    <span id="closeNav" href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                                        style="font-size:26px;display:none">×</span>
+                                </div>
+                                <div id="mySidenav" class="sidenav">
+                                    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+                                    <a href="#">ĐĂNG NHẬP/TẠO TÀI KHOẢN</a>
+                                    <a href="#">MÃ E-VOUCHER</a>
+                                    <a href="#">KHUYẾN MÃI</a>
+                                    <a href="./menu.html">THỰC ĐƠN</a>
+                                    <a href="./phone.html">THEO DÕI ĐƠN HÀNG</a>
+                                    <a href="#">BLOG</a>
+                                    <a href="#">TUYỂN DỤNG</a>
+                                    <a href="#">CHÍNH SÁCH</a>
+                                    <a href="./list_store.html">DANH SÁCH CỬA HÀNG</a>
+                                    <div class="fb-itg">
+                                        <a
+                                            href="https://www.facebook.com/DominosPizzaVietnam/?brand_redir=207571100452">
+                                            <i class="fa fa-facebook" style="font-size: 30px;"></i></a>
+                                        <a href="https://www.instagram.com/dominospizza_vietnam/">
+                                            <i class="fa  fa-instagram" style="font-size: 30px;"></i></a>
+                                    </div>
+                                    <div class="d-flex1">
+                                        <a class="text-decoration-none pl-3" role="button"><img
+                                                src="../image/flags/flag-vn.png" alt="flag-vn"></a>
+                                        <a class="text-decoration-none ml-1" role="button"><img
+                                                src="../image/flags/flag-en.png" alt="flag-en"></a>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                </nav>
+            </div>
+    </div>
+
+    <!-- bodymap -->
+    <div class="body"> 
+      <div class="content"> 
+      <div class="imgbody-dsdh">
+          <img src="../img/stock-stracking.png" class="img-fluid" alt="stock-stracking">
+      </div>
+      <div class="text-order">
+      <div class="text-order-h4">
+          <h4>Theo Dõi Đơn Hàng - Domino's Pizza Việt Nam</h4>
+      </div>  
+      <div class="inputbutton">  
+        <div>          
+        <input class="input" type="text" id="phone1" oninput="validatePhone1()"
+        placeholder="Nhập số điện thoại của bạn"> <br>
+        <span id="phoneError1"></span>
+      </div>
+          <button  id="check" class="button" type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <!-- <p id="message" style="color: red; display: none; font-weight: bold;">Vui lòng nhập số điện thoại của bạn!</p>
+      <p id="success" style="color: red; display: none; font-weight: bold;">Số điện thoại không tồn tại!</p> -->
+
+  </div>  
+</div>
+</div>
+<!-- javascript -->
+<script>
+function validatePhone1() {
+  var phone1 = document.getElementById("phone1").value;
+  document.getElementById("phoneError1").style.fontSize = "14px";
+  document.getElementById("phoneError1").style.color = "red";
+  document.getElementById("phoneError1").style.fontWeight= "bold";
+
+  if (phone1.length < 1) {
+    document.getElementById("phoneError1").innerText = "Vui lòng nhập số điện thoại của bạn!";
+  } else {
+    if (!validatePhoneNumber(phone1)) {
+      document.getElementById("phoneError1").innerText = "Số điện thoại không tồn tại!";
+      return false;
+    } else {
+      document.getElementById("phoneError1").innerText = "";
+
+    }
+  }
+}
+</script>
+
+
+
+<footer class="footer d-none d-lg-block">
+  <div class="body-footer ">
+    <div class="div1">
+      <div class="d-flex ">
+        <p class="mb-0">Kết nối Domino's Pizza Việt Nam:</p>
+        <a href="https://www.facebook.com/DominosPizzaVietnam/?brand_redir=207571100452" target="_blank">
+          <i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/dominospizza_vietnam/" target="_blank">
+          <i class="fab  fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="foot-main">
+      <a href="./index.html"> <img class="footer-logo" src="../image/domino.svg" alt="Domino's Pizza Logo"></a>
+      <div class="hotline">
+        <div class="phone">
+          <h3><i class="fas fa-phone fa-rotate-90"></i> Hotline Đặt Hàng</h3>
+        </div>
+        <div class="phone-number">1900 6099</div>
+      </div>
+      <div class="links">
+        <ul>
+          <li> <a href="https://dominos.vn/blog-detail/nhung-mon-an-trong-ngay-sinh-nhat">Blog</a></li>
+          <li><a href="https://tuyendung.vfbs.vn/">Tuyển dụng</a></li>
+          <li><a href="https://dominos.vn/policy">Chính sách</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="#">Thực đơn</a></li>
+          <li><a href="#">Mã e-voucher</a></li>
+          <li> <a href="#">Khuyến mãi</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <ul>
+          <li> <a href="./phone.html">Theo dõi đơn hàng</a></li>
+          <li><a href="./list_store.html">Danh sách cửa hàng</a></li>
+        </ul>
+      </div>
+      <div class="imgfooter">
+        <a href="http://online.gov.vn/Home/WebDetails/9616" target="_blank" rel="noreferrer">
+          <img src="../image/payment/credentials.png" alt="credentials"></a>
+      </div>
+    </div>
+    <div class="footer-end">
+      <div class="copyright">
+        © 2020 Domino's Pizza Vietnam | Privacy Policy
+      </div>
+      <div class="block">
+        <span class="button">Switch to English version</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- For small devices (tablets, 576px and up) -->
+<footer class="footer2 d-none d-sm-block d-lg-none">
+  <div class="body-footer ">
+    <div class="div1">
+      <div class="d-flex ">
+        <p class="mb-0">Kết nối Domino's Pizza Việt Nam:</p>
+        <a href="https://www.facebook.com/DominosPizzaVietnam/?brand_redir=207571100452" target="_blank">
+          <i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/dominospizza_vietnam/" target="_blank">
+          <i class="fab  fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="foot-main">
+      <a href="#dominos.html"> <img class="footer-logo" src="../image/domino.svg" alt="Domino's Pizza Logo"></a>
+      <div class="hotline">
+        <div class="phone">
+          <h3><i class="fas fa-phone fa-rotate-90"></i> Hotline Đặt Hàng</h3>
+        </div>
+        <div class="phone-number">1900 6099</div>
+      </div>
+      <div class="imgfooter">
+        <a href="http://online.gov.vn/Home/WebDetails/9616" target="_blank" rel="noreferrer">
+          <img src="../image/payment/credentials.png" alt="credentials"></a>
+      </div>
+    </div>
+    <div class="footer-end">
+      <div class="copyright">
+        © 2020 Domino's Pizza Vietnam | Privacy Policy
+      </div>
+      <div class="block">
+        <span class="button">Switch to English version</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- For extra small devices (phones, less than 576px) -->
+<footer class="footer d-block d-sm-none">
+  <div class="body-footer2 ">
+    <div class="foot-main2">
+      <div class="hotline2">
+        <div class="phone2">
+          <h3><i class="fas fa-phone fa-rotate-90"></i> Hotline Đặt Hàng</h3>
+        </div>
+        <div class="phone-number2">1900 6099</div>
+      </div>
+    </div>
+    <div class="footer-end2">
+      <div class="copyright2">
+        © 2020 Domino's Pizza Vietnam |
+      </div>
+      <div class="d-flex1">
+        <a class="text-decoration-none pl-3" role="button"><img src="../image/flags/flag-vn.png" alt="flag-vn"></a>
+        <a class="text-decoration-none ml-1" role="button"><img src="../image/flags/flag-en.png" alt="flag-en"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
